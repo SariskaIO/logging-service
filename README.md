@@ -35,4 +35,4 @@ Nothing else matters order wise.
 If you want to live life dangerously simply run the following from 
 the directory above this one:
 
-    kubectl apply -f kubernetes-elastic-logging
+    kubectl apply -k .
