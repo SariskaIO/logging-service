@@ -36,3 +36,8 @@ If you want to live life dangerously simply run the following from
 the directory above this one:
 
     kubectl apply -k .
+    
+ References: 
+ 
+ https://nick.sarbicki.com/blog/visualising-services-kubernetes-elk-kubernetes/
+    
