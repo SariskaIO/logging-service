@@ -1,7 +1,3 @@
-kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-namespace: kube-system
-
 resources:
 - curator-cronjob.yaml
 - elasticsearch-ss.yaml
