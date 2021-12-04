@@ -1,7 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: kube-system
+
 resources:
-- curator-cronjob.yaml
-- elasticsearch-ss.yaml
-- filebeat-ds.yaml
-- kibana-deployment.yaml
-- logstash-deployment.yaml
-- metricbeat-ds.yaml
+- elasticsearch/elasticsearch-configmap.yaml
+- elasticsearch/elasticsearch-service.yaml
+- elasticsearch/elasticsearch-statefulset.yaml
+- kibana/kibana-deployment.yaml
+- kibana/kibana-secret.yaml
+- kibana/kibana-service.yaml
+- logging/logging-operator-crd.yaml
+- logging/logging-deployment.yaml
