@@ -3,11 +3,21 @@ kind: Kustomization
 namespace: kube-system
 
 resources:
-- elasticsearch/elasticsearch-configmap.yaml
-- elasticsearch/elasticsearch-service.yaml
-- elasticsearch/elasticsearch-statefulset.yaml
-- kibana/kibana-deployment.yaml
-- kibana/kibana-secret.yaml
-- kibana/kibana-service.yaml
-- logging/logging-operator-crd.yaml
+# - elasticsearch/elasticsearch-configmap.yaml
+# - elasticsearch/elasticsearch-service.yaml
+# - elasticsearch/elasticsearch-statefulset.yaml
+# - kibana/kibana-deployment.yaml
+# - kibana/kibana-secret.yaml
+# - kibana/kibana-service.yaml
+- logging/crds/all-in-one.yaml
+- logging/crds/logging.banzaicloud.io-flows.yaml
+- logging/crds/logging.banzaicloud.io-clusterflows.yaml
+- logging/crds/logging.banzaicloud.io-outputs.yaml
+- logging/crds/logging.banzaicloud.io-clusteroutputs.yaml
+- logging/crds/logging.banzaicloud.io-loggings.yaml
+- logging/elasticsearch-deployment.yaml
+- logging/kibana-deployment.yaml
 - logging/logging-deployment.yaml
+- logging/logging-flow-deployment.yaml
+- logging/logging-output-deployment.yaml
+- logging/logging-generator-deployment.yaml

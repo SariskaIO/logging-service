@@ -1,41 +1,8 @@
 apiVersion: logging.banzaicloud.io/v1beta1
 kind: Logging
 metadata:
-  name: production-logging-namespaced
-  namespace: kube-system
+  name: default-logging-simple
 spec:
-  fluentd: 
-    bufferStorageVolume:
-      pvc:
-        spec:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: 5Gi
-          storageClassName: fast
-          volumeMode: Filesystem
-    scaling:
-      replicas: 3
-      drain:
-        enabled: true
-    fluentOutLogrotate:
-      enabled: true
-      path: /fluentd/log/out
-      age: "10"
-      size: "10485760"
-  fluentbit:
-    filterKubernetes:
-      Kube_URL: "https://kubernetes.default.svc:443"
-      Match: "kube.*"
-    inputTail:
-      Refresh_Interval: "60"
-      Rotate_Wait: "5"
-    bufferStorage:
-      storage.path: /buffers
-    extraVolumeMounts:
-    - source: /opt/docker
-      destination: /opt/docker
-      readOnly: true
-  controlNamespace: kube-system
-  watchNamespaces: ["production"]
+  fluentd: {}
+  fluentbit: {}
+  controlNamespace: logging
