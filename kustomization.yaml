@@ -1,14 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: kube-system
+namespace: logging-test
 
 resources:
-# - elasticsearch/elasticsearch-configmap.yaml
-# - elasticsearch/elasticsearch-service.yaml
-# - elasticsearch/elasticsearch-statefulset.yaml
-# - kibana/kibana-deployment.yaml
-# - kibana/kibana-secret.yaml
-# - kibana/kibana-service.yaml
 - logging/crds/all-in-one.yaml
 - logging/crds/logging.banzaicloud.io-flows.yaml
 - logging/crds/logging.banzaicloud.io-clusterflows.yaml
@@ -21,3 +15,4 @@ resources:
 - logging/logging-flow-deployment.yaml
 - logging/logging-output-deployment.yaml
 - logging/logging-generator-deployment.yaml
+- logging/logging-cluster-output-deployment.yaml

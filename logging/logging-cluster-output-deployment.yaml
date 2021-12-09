@@ -1,7 +1,7 @@
 apiVersion: logging.banzaicloud.io/v1beta1
-kind: Output
+kind: ClusterOutput
 metadata:
-  name: es-output
+  name: es-cluster-output
   namespace: logging-test
 spec:
   elasticsearch:

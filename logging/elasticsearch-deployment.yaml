@@ -1,11 +1,12 @@
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
-  name: logging
+  name: quickstart
+  namespace: logging-test
 spec:
   version: 7.10.0
   nodeSets:
-  - name: es-cluster
+  - name: default
     count: 1
     config:
       node.master: true
