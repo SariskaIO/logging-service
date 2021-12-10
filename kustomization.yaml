@@ -14,6 +14,5 @@ resources:
 - logging/logging-deployment.yaml
 - logging/logging-flow-deployment.yaml
 - logging/logging-output-deployment.yaml
-- logging/logging-generator-deployment.yaml
 - logging/logging-cluster-output-deployment.yaml
 - logging/logging-cluster-flow-deployment.yaml
