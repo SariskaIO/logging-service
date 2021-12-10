@@ -1,10 +1,10 @@
 apiVersion: logging.banzaicloud.io/v1beta1
-kind: Flow
+kind: ClusterFlow
 metadata:
-  name: es-flow
+  name: es-cluster-flow
   namespace: logging-test
 spec:
   match:
      - select: {}
-  localOutputRefs:
-    - es-output
+  globalOutputRefs:
+    - es-cluster-output
