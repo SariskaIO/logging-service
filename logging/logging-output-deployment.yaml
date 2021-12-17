@@ -2,10 +2,10 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: Output
 metadata:
   name: es-output
-  namespace: logging-test
+  namespace: logging
 spec:
   elasticsearch:
-    host: quickstart-es-http.logging-test.svc.cluster.local
+    host: quickstart-es-http.logging.svc.cluster.local
     port: 9200
     scheme: https
     ssl_verify: false

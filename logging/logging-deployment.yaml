@@ -2,9 +2,9 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: Logging
 metadata:
   name: default-logging-simple
-  namespace: logging-test
+  namespace: logging
 spec:
   fluentd: {}
   fluentbit: {}
   enableRecreateWorkloadOnImmutableFieldChange: true
-  controlNamespace: logging-test
+  controlNamespace: logging
