@@ -1,7 +1,7 @@
-# EFK Setup
+## EFK Setup
 
 
-deployed at: https://logs.sariska.io
+    deployed at: https://logs.sariska.io
 
 
 ## Create a Namespace logging
