@@ -2,7 +2,8 @@
 
 
     1. logs can be accessed at: 
-        [a link](https://logs.sariska.io)
+       [here](https://logs.sariska.io) # It works!
+
 
 
 
