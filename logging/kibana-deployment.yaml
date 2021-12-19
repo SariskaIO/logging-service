@@ -12,3 +12,6 @@ spec:
     service: 
       spec:
         type: NodePort
+    tls: 
+      selfSignedCertificate:
+        disabled: true
