@@ -1,7 +1,8 @@
 ## EFK Setup
 
 
-    logs can be accessed at: [a link](https://logs.sariska.io)
+    1. logs can be accessed at: 
+        [a link](https://logs.sariska.io)
 
 
 
