@@ -1,12 +1,7 @@
 ## EFK Setup
 
-
-    1. logs can be accessed at: 
-    
-    [a link](https://logs.sariska.io)
-
-
-
+ 1. logs can be accessed at: https://logs.sariska.io
+   
 
 ## Create a Namespace logging
     1. kubectl create ns logging
