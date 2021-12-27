@@ -11,9 +11,14 @@
     * Configure KUBECONFIG evn variable into your env variable: https://stackoverflow.com/a/45276283 
 
 ## Deploy loggin-operator
-    1. helm repo add banzaicloud-stable https://kubernetes-charts.banzaicloud.com
-    2. helm repo update
-    3. helm upgrade --install --wait --create-namespace --namespace logging logging-operator banzaicloud-stable/logging-operator
+    
+    overwrite default values of values.yaml
+    1. change values.yaml
+    2. helm package .
+    3. helm install logging-operator -f values.yaml .
+    4. helm repo add banzaicloud-stable https://kubernetes-charts.banzaicloud.com
+    5. helm repo update
+    6. helm upgrade --install --wait --create-namespace --namespace logging logging-operator banzaicloud-stable/logging-operator
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
 
 ## Deploy Manifest
