@@ -39,4 +39,5 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 * https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/common_types/
 * https://github.com/banzaicloud/logging-operator/blob/master/config/crd/bases/logging.banzaicloud.io_loggings.yaml
 * https://stackoverflow.com/questions/52009124/not-able-to-completely-remove-kubernetes-customresource
+* https://techblog.cisco.com/blog/k8s-logging-tls/
 
