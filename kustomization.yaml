@@ -3,16 +3,11 @@ kind: Kustomization
 namespace: logging
 
 resources:
-- logging/crds/all-in-one.yaml
-- logging/crds/logging.banzaicloud.io-flows.yaml
-- logging/crds/logging.banzaicloud.io-clusterflows.yaml
-- logging/crds/logging.banzaicloud.io-outputs.yaml
-- logging/crds/logging.banzaicloud.io-clusteroutputs.yaml
-- logging/crds/logging.banzaicloud.io-loggings.yaml
-- logging/elasticsearch-deployment.yaml
-- logging/kibana-deployment.yaml
-- logging/logging-deployment.yaml
-- logging/logging-flow-deployment.yaml
-- logging/logging-output-deployment.yaml
-- logging/logging-cluster-output-deployment.yaml
-- logging/logging-cluster-flow-deployment.yaml
+- all-in-one.yaml
+- elasticsearch-deployment.yaml
+- kibana-deployment.yaml
+- flow-deployment.yaml
+- logging-deployment.yaml
+- output-deployment.yaml
+- test-deployment.yaml
+
