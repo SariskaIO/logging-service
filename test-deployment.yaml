@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: log-generator
+ namespace: production
 spec:
  selector:
    matchLabels:
@@ -14,4 +15,4 @@ spec:
    spec:
      containers:
      - name: nginx
-       image: nginx
+       image: banzaicloud/log-generator:0.3.2

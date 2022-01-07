@@ -12,3 +12,29 @@ spec:
       node.data: true
       node.ingest: true
       node.store.allow_mmap: false
+    podTemplate:
+      spec:
+        nodeSelector:
+          alpha.eksctl.io/nodegroup-name: "managed-ng-logging"         
+        containers:
+        - name: elasticsearch
+          env:
+          - name: ES_JAVA_OPTS
+            value: -Xms2g -Xmx2g
+          resources:
+            requests:
+              memory: 2Gi
+              cpu: 1
+            limits:
+              cpu: 2
+              memory: 4Gi
+    volumeClaimTemplates:
+    - metadata:
+        name: elasticsearch-data # Do not change this name unless you set up a volume mount for the data path.
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 20Gi
+        storageClassName: gp2

@@ -6,6 +6,16 @@ metadata:
 spec:
   version: 7.10.0
   count: 1
+  podTemplate:
+    spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: "managed-ng-logging"         
+      containers:
+      - name: kibana
+        resources:
+          limits:
+            memory: 2Gi
+            cpu: 1
   elasticsearchRef:
     name: quickstart
   http:

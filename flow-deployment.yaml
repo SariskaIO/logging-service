@@ -2,17 +2,19 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: Flow
 metadata:
   name: es-flow
+  namespace: logging
 spec:
   filters:
-    - tag_normaliser: {}
+    - dedot:
+        de_dot_separator: "-"
+        de_dot_nested: true
     - parser:
         remove_key_name_field: true
-        reserve_data: true
         parse:
           type: nginx
+    - tag_normaliser:
+        format: ${namespace_name}.${pod_name}.${container_name}
   match:
-     - select:
-         labels:
-           app.kubernetes.io/name: log-generator
+     - select: {}
   localOutputRefs:
     - es-output

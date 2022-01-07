@@ -9,5 +9,5 @@ resources:
 - flow-deployment.yaml
 - logging-deployment.yaml
 - output-deployment.yaml
-- test-deployment.yaml
-
+- cluster-flow-deployment.yaml
+- cluster-output-deployment.yaml
