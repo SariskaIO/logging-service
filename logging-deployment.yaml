@@ -5,10 +5,6 @@ metadata:
 spec:
   fluentd:
     logLevel: debug
-  fluentbit: 
-    extraVolumeMounts:
-    - source: /opt/docker
-      destination: /opt/docker
-      readOnly: true
+  fluentbit: {}
   controlNamespace: logging
   watchNamespaces: ["production", "streaming", "logging"]
