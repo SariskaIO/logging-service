@@ -4,44 +4,27 @@ metadata:
   name: es-output
   namespace: logging
 spec:
- file:
-   path: /tmp/logs/${tag}/%Y/%m/%d.%H.%M
-   append: true
-   buffer:
-     timekey: 1m
-     timekey_wait: 10s
-     timekey_use_utc: true
-  # s3:
-  #   aws_key_id:
-  #     valueFrom:
-  #       secretKeyRef:
-  #         name: logging-service-secrets
-  #         key: awsAccessKeyId
-  #   aws_sec_key:
-  #     valueFrom:
-  #       secretKeyRef:
-  #         name: logging-service-secrets
-  #         key: awsSecretAccessKey
-  #   s3_region: ap-south-1
-  #   path: logs/${tag}/%Y/%m/%d/
-  #   buffer:
-  #     timekey: 10m
-  #     timekey_wait: 30s
-  #     timekey_use_utc: true
-#  elasticsearch:
-#     host: quickstart-es-http.logging.svc.cluster.local
-#     port: 9200
-#     scheme: https
-#     ssl_verify: false
-#     ssl_version: TLSv1_2
-#     user: elastic
-#     password:
-#       valueFrom:
-#         secretKeyRef:
-#           name: quickstart-es-elastic-user
-#           key: elastic
-#     buffer:
-#       timekey: 1m
-#       timekey_wait: 30s
-#       timekey_use_utc: true
+  #  file: // add type file for debugging 
+  #    path: /tmp/logs/${tag}/%Y/%m/%d.%H.%M
+  #    append: true
+  #    buffer:
+  #      timekey: 1m
+  #      timekey_wait: 10s
+  #      timekey_use_utc: true
+ elasticsearch:
+    host: quickstart-es-http.logging.svc.cluster.local
+    port: 9200
+    scheme: https
+    ssl_verify: false
+    ssl_version: TLSv1_2
+    user: elastic
+    password:
+      valueFrom:
+        secretKeyRef:
+          name: quickstart-es-elastic-user
+          key: elastic
+    buffer:
+      timekey: 1m
+      timekey_wait: 30s
+      timekey_use_utc: true
   

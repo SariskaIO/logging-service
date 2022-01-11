@@ -4,10 +4,10 @@ metadata:
   name: es-flow
   namespace: logging
 spec:
+  filters:
+    - record_transformer:
+        remove_keys: kubernetes
   match:
      - select: {}
-     - exclude: 
-        labels:
-          app: coturn
   localOutputRefs:
     - es-output

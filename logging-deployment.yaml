@@ -3,12 +3,6 @@ kind: Logging
 metadata:
   name: default-logging-simple
 spec:
-  # defaultFlow:
-  #   filters:
-  #      - dedot:
-  #         de_dot_nested: true
-  #         de_dot_separator: "-"
-
   fluentd:
     logLevel: debug
   fluentbit: 
