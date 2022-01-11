@@ -22,8 +22,13 @@
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
 
 ## Deploy Manifest
-    1. kubectl apply -k .
+
+1. kubectl apply -k .
  
+## Quick Guide
+
+1. https://banzaicloud.com/docs/one-eye/logging-operator/quickstarts/es-nginx/
+
 
 ## Useful Command
 
