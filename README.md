@@ -32,6 +32,12 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 3. kubectl port-forward service/quickstart-kb-http -n logging-test 5601
 4. kubectl get secret quickstart-es-elastic-user  -n logging-test o=jsonpath='{.data.elastic}' | base64 --decode; echo
 
+## Enriching the logs
+
+  For extra filters and log formatting please use below filters
+ 
+1. https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/
+
 
 ## Important resources
 * https://logz.io/blog/fluentd-vs-fluent-bit/
