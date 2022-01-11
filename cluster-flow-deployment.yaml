@@ -3,21 +3,13 @@ kind: ClusterFlow
 metadata:
   name: es-cluster-flow
 spec:
-  filters:
-    2022-01-02 19:45:34 +0000 [warn]: #0 send an error event to @ERROR: error_class=Fluent::Plugin::ElasticsearchErrorHandler::ElasticsearchError error="400 - Rejected by Elasticsearch [error type]: mapper_parsing_exception [reason]: 'object mapping for [kubernetes.labels.app] tried to parse field [app] as object, but found a concrete value'" location=nil tag="production.shard-0-jvb-0.jvb" time=2022-01-02 18:39:45.978771692 +0000
-
-    - dedot:
-        de_dot_separator: "-"
-        de_dot_nested: true
-    - parser:
-        remove_key_name_field: true
-        parse:
-          type: nginx
-    - tag_normaliser:
-        format: ${namespace_name}.${pod_name}.${container_name}
   match:
-    - select:
+     - select:
+        namespaces:
+          - "streaming"
+          - "production"
+     - exclude: 
         labels:
-          app: nginx
+          app: coturn
   globalOutputRefs:
     - es-cluster-output

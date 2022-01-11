@@ -4,17 +4,10 @@ metadata:
   name: es-flow
   namespace: logging
 spec:
-  filters:
-    - dedot:
-        de_dot_separator: "-"
-        de_dot_nested: true
-    - parser:
-        remove_key_name_field: true
-        parse:
-          type: nginx
-    - tag_normaliser:
-        format: ${namespace_name}.${pod_name}.${container_name}
   match:
      - select: {}
+     - exclude: 
+        labels:
+          app: coturn
   localOutputRefs:
     - es-output
