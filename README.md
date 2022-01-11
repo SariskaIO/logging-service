@@ -25,7 +25,7 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 
 1. kubectl apply -k .
  
-## Quick Guide
+## Quick Guide everything
 
 1. https://banzaicloud.com/docs/one-eye/logging-operator/quickstarts/es-nginx/
 
@@ -43,6 +43,14 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
  
 1. https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/
 
+
+## Troubleshooting fluentd
+
+   1.  https://banzaicloud.com/docs/one-eye/logging-operator/operation/troubleshooting/fluentd/
+
+## Troubleshooting fluentbit
+
+   1. https://banzaicloud.com/docs/one-eye/logging-operator/operation/troubleshooting/fluentbit/
 
 ## Important resources
 * https://logz.io/blog/fluentd-vs-fluent-bit/
