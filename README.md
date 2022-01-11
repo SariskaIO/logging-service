@@ -2,7 +2,6 @@
 
  1. logs can be accessed at: https://logs.sariska.io
    
-
 ## Create a Namespace logging
     1. kubectl create ns logging
 
@@ -47,6 +46,11 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 ## Troubleshooting fluentbit
 
    1. https://banzaicloud.com/docs/one-eye/logging-operator/operation/troubleshooting/fluentbit/
+
+## Interacting with elasticsearch
+
+https://logs.sariska.io/app/dev_tools#/console
+
 
 ## Important resources
 * https://logz.io/blog/fluentd-vs-fluent-bit/
