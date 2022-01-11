@@ -11,19 +11,20 @@
     * Configure KUBECONFIG evn variable into your env variable: https://stackoverflow.com/a/45276283 
 
 ## Deploy loggin-operator
-    
-    overwrite default values of values.yaml
-    1. change values.yaml
-    2. helm package .
-    3. helm install logging-operator -f values.yaml .
-    4. helm repo add banzaicloud-stable https://kubernetes-charts.banzaicloud.com
-    5. helm repo update
-    6. helm upgrade --install --wait --create-namespace --namespace logging logging-operator banzaicloud-stable/logging-operator
+
+    1. helm repo add banzaicloud-stable https://kubernetes-charts.banzaicloud.com
+    2. helm repo update
+    3. helm upgrade --install --wait --create-namespace --namespace logging logging-operator banzaicloud-stable/logging-operator
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
 
 ## Deploy Manifest
-    1. kubectl apply -k .
+
+1. kubectl apply -k .
  
+## Quick Guide everything
+
+1. https://banzaicloud.com/docs/one-eye/logging-operator/quickstarts/es-nginx/
+
 
 ## Useful Command
 
@@ -32,6 +33,20 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 3. kubectl port-forward service/quickstart-kb-http -n logging-test 5601
 4. kubectl get secret quickstart-es-elastic-user  -n logging-test o=jsonpath='{.data.elastic}' | base64 --decode; echo
 
+## Enriching the logs
+
+  For extra filters and log formatting please use below filters
+ 
+1. https://banzaicloud.com/docs/one-eye/logging-operator/configuration/plugins/filters/
+
+
+## Troubleshooting fluentd
+
+   1.  https://banzaicloud.com/docs/one-eye/logging-operator/operation/troubleshooting/fluentd/
+
+## Troubleshooting fluentbit
+
+   1. https://banzaicloud.com/docs/one-eye/logging-operator/operation/troubleshooting/fluentbit/
 
 ## Important resources
 * https://logz.io/blog/fluentd-vs-fluent-bit/
