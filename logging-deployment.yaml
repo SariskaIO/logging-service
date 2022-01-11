@@ -11,4 +11,4 @@ spec:
       destination: /opt/docker
       readOnly: true
   controlNamespace: logging
-  watchNamespaces: ["production", "streaming"]
+  watchNamespaces: ["production", "streaming", "logging"]

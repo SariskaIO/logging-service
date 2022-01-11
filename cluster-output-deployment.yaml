@@ -3,7 +3,7 @@ kind: ClusterOutput
 metadata:
   name: es-cluster-output
 spec:
-  enabledNamespaces: ["streaming", "production"]
+  enabledNamespaces: ["streaming", "production", "logging"]
   # file:   // add type file for debugging 
   #   path: /tmp/logs/${tag}/%Y/%m/%d.%H.%M
   #   append: true

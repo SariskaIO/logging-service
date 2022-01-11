@@ -3,11 +3,8 @@ kind: ClusterFlow
 metadata:
   name: es-cluster-flow
 spec:
-  filters:
-    - record_transformer:
-       remove_keys: kubernetes
   match:
      - select:
-        namespaces: ["streaming", "production"]
+        namespaces: ["streaming", "production", "logging"]
   globalOutputRefs:
     - es-cluster-output
