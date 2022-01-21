@@ -9,8 +9,12 @@ resources:
 - logging/crds/logging.banzaicloud.io-outputs.yaml
 - logging/crds/logging.banzaicloud.io-clusteroutputs.yaml
 - logging/crds/logging.banzaicloud.io-loggings.yaml
+- logging/clusterrole_binding.yaml
+- logging/clusterrole.yaml
+- logging/serviceaccount.yaml
 - logging/elasticsearch-deployment.yaml
 - logging/kibana-deployment.yaml
+- logging/logging-operator.yaml
 - logging/logging-deployment.yaml
 - logging/logging-flow-deployment.yaml
 - logging/logging-output-deployment.yaml
