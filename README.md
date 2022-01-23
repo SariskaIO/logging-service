@@ -1,6 +1,11 @@
 ## EFK Setup
 
  1. logs can be accessed at: https://logs.sariska.io
+
+## Architecture:
+
+![image description](https://camo.githubusercontent.com/1826e4f1b9b8107d7e7480137c767cbb9ef9689746bad30d8b0ce7ceef75b6d0/68747470733a2f2f62616e7a6169636c6f75642e636f6d2f646f63732f6f6e652d6579652f6c6f6767696e672d6f70657261746f722f696d672f6c6f6767696e675f6f70657261746f725f666c6f772e706e67)
+
    
 ## Create a Namespace logging
     1. kubectl create ns logging
