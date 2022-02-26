@@ -32,10 +32,9 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 
 ## Useful Command
 
-1. kubectl get secret quickstart-es-elastic-user -n logging-test -o go-template='{{.data.elastic | base64decode}}'
+1. kubectl get secret quickstart-es-elastic-user  -n logging -o go-template='{{.data.elastic | base64decode}}'
 2. kubectl port-forward service/quickstart-es-http -n logging-test 9200
 3. kubectl port-forward service/quickstart-kb-http -n logging-test 5601
-4. kubectl get secret quickstart-es-elastic-user  -n logging-test o=jsonpath='{.data.elastic}' | base64 --decode; echo
 
 ## Enriching the logs
 
