@@ -25,6 +25,17 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 
 1. kubectl apply -k .
  
+
+## Clear Elasticsearch index 
+
+ curl -X DELETE 'http://localhost:9200/_all'
+
+ 
+ 
+## Restart fluentbit daemonsets  
+
+ curl -X DELETE 'http://localhost:9200/_all'
+
 ## Quick Guide everything
 
 1. https://banzaicloud.com/docs/one-eye/logging-operator/quickstarts/es-nginx/
@@ -54,6 +65,12 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 ## Interacting with elasticsearch
 
 https://logs.sariska.io/app/dev_tools#/console
+
+
+## Please keep monitoring ES pvc , otherwise we need to relaunch cluster
+
+https://logs.sariska.io/app/dev_tools#/console
+
 
 
 ## Important resources
