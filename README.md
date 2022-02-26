@@ -25,6 +25,17 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 
 1. kubectl apply -k .
  
+
+## Clear Elasticsearch index 
+
+ curl -X DELETE 'http://localhost:9200/_all'
+
+ 
+ 
+## Restart fluentbit daemonsets  
+
+ curl -X DELETE 'http://localhost:9200/_all'
+
 ## Quick Guide everything
 
 1. https://banzaicloud.com/docs/one-eye/logging-operator/quickstarts/es-nginx/
@@ -32,10 +43,9 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 
 ## Useful Command
 
-1. kubectl get secret quickstart-es-elastic-user -n logging-test -o go-template='{{.data.elastic | base64decode}}'
+1. kubectl get secret quickstart-es-elastic-user  -n logging -o go-template='{{.data.elastic | base64decode}}'
 2. kubectl port-forward service/quickstart-es-http -n logging-test 9200
 3. kubectl port-forward service/quickstart-kb-http -n logging-test 5601
-4. kubectl get secret quickstart-es-elastic-user  -n logging-test o=jsonpath='{.data.elastic}' | base64 --decode; echo
 
 ## Enriching the logs
 
@@ -55,6 +65,12 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 ## Interacting with elasticsearch
 
 https://logs.sariska.io/app/dev_tools#/console
+
+
+## Please keep monitoring ES pvc , otherwise we need to relaunch cluster
+
+https://logs.sariska.io/app/dev_tools#/console
+
 
 
 ## Important resources
