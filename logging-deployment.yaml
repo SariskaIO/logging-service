@@ -7,4 +7,4 @@ spec:
     logLevel: debug
   fluentbit: {}
   controlNamespace: logging
-  watchNamespaces: ["production", "streaming", "logging"]
+  watchNamespaces: ["production"]

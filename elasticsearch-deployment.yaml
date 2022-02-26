@@ -29,12 +29,12 @@ spec:
               cpu: 2
               memory: 4Gi
     volumeClaimTemplates:
-    - metadata:
-        name: elasticsearch-data # Do not change this name unless you set up a volume mount for the data path.
-      spec:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 20Gi
-        storageClassName: gp2
+      - metadata:
+          name: elasticsearch-data # Do not change this name unless you set up a volume mount for the data path.
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 100Gi
+          storageClassName: gp2

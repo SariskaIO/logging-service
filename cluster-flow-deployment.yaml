@@ -5,6 +5,6 @@ metadata:
 spec:
   match:
      - select:
-        namespaces: ["streaming", "production", "logging"]
+        namespaces: ["production"]
   globalOutputRefs:
     - es-cluster-output
