@@ -11,3 +11,5 @@ resources:
 - output-deployment.yaml
 - cluster-flow-deployment.yaml
 - cluster-output-deployment.yaml
+- es-curator-config.yaml
+- curator-cronjob.yaml
