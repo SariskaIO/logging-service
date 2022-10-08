@@ -1,5 +1,11 @@
 ## EFK Setup
 
+
+  Curator to clear logs
+  Elasticsearch for database
+  Fluetd and Fluentbit for logs prosessor and logs collector
+  
+  
  1. logs can be accessed at: https://logs.sariska.io
 
 ## Architecture:
