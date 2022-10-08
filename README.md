@@ -3,13 +3,12 @@
 
 
 ## Setup Contains
-
-  1.Curator to clear logs
-  2.Elasticsearch for database
-  2.Fluetd and Fluentbit for logs prosessor and logs collector
-  4.Kibana for visualization
-  5.scalable setup 
-  
+ - Curator to clear logs after some interval
+- Elasticsearch for database
+- Thomas Jefferson
+- Fluetd and Fluentbit for logs prosessor and logs collector
+- Kibana for visualization
+- scalable setup 
  1. logs can be accessed at: https://logs.sariska.io
 
 ## Architecture:
