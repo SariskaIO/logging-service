@@ -1,10 +1,14 @@
 ## EFK Setup
 
 
-  Curator to clear logs
-  Elasticsearch for database
-  Fluetd and Fluentbit for logs prosessor and logs collector
-  
+
+## Setup Contains
+
+  1.Curator to clear logs
+  2.Elasticsearch for database
+  2.Fluetd and Fluentbit for logs prosessor and logs collector
+  4.Kibana for visualization
+  5.scalable setup 
   
  1. logs can be accessed at: https://logs.sariska.io
 
