@@ -8,7 +8,6 @@
  - Fluetd and Fluentbit for logs prosessor and logs collector
  - Kibana for visualization
  - scalable setup 
- 1. logs can be accessed at: https://logs.sariska.io
 
 ## Architecture:
 
