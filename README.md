@@ -5,7 +5,7 @@
 ## Setup Contains
  - Curator to clear logs after some interval
  - Elasticsearch for database
- - Fluetd and Fluentbit for logs prosessor and logs collector
+ - Fluentd and Fluentbit for logs prosessor and logs collector
  - Kibana for visualization
  - scalable setup 
 
