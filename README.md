@@ -56,7 +56,7 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 
 
 
-## CRD
+## Custom Resource Definition
 
 You can define `outputs` (destinations where you want to send your log messages, for example, Elasticsearch, or and Amazon S3 bucket), and `flows` that use filters and selectors to route log messages to the appropriate outputs. You can also define cluster-wide outputs and flows, for example, to use a centralized output that namespaced users cannot modify.
 
