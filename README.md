@@ -42,7 +42,7 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
  
 https://www.elastic.co/guide/en/cloud-on-k8s/2.5/k8s-deploy-eck.html
 https://github.com/elastic/cloud-on-k8s/tree/2.5/config/samples
-
+https://www.elastic.co/guide/en/cloud-on-k8s/2.5/k8s-deploy-eck.html
 ## Restart fluentbit daemonsets  
 
  curl -X DELETE 'http://localhost:9200/_all'
