@@ -41,7 +41,7 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 ## Elastic operator CRD
  
 https://www.elastic.co/guide/en/cloud-on-k8s/2.5/k8s-deploy-eck.html
-
+https://github.com/elastic/cloud-on-k8s/tree/2.5/config/samples
 
 ## Restart fluentbit daemonsets  
 
