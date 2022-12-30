@@ -3,8 +3,5 @@ kind: ClusterFlow
 metadata:
   name: es-cluster-flow
 spec:
-  match:
-     - select:
-        namespaces: ["production"]
   globalOutputRefs:
     - es-cluster-output

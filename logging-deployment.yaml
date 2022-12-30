@@ -1,10 +1,12 @@
+
 apiVersion: logging.banzaicloud.io/v1beta1
 kind: Logging
 metadata:
   name: default-logging-simple
+  namespace: logging
 spec:
   fluentd:
     logLevel: debug
   fluentbit: {}
   controlNamespace: logging
-  watchNamespaces: ["production"]
+  watchNamespaces: ["production", "streaming"]

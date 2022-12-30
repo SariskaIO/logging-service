@@ -4,9 +4,27 @@ metadata:
   name: quickstart
   namespace: logging
 spec:
-  version: 7.10.0
+  version: 8.4.2
   count: 1
+  elasticsearchRef:
+    name: "quickstart"
+  http:
+    service: 
+      spec:
+        type: NodePort
+    tls: 
+      selfSignedCertificate:
+        disabled: true    
+  #http:
+  #  service:
+  #    spec:
+  #      type: LoadBalancer
+  # this shows how to customize the Kibana pod
+  # with labels and resource limits
   podTemplate:
+    metadata:
+      labels:
+        foo: bar
     spec:
       nodeSelector:
         alpha.eksctl.io/nodegroup-name: "managed-ng-logging"         
@@ -14,14 +32,5 @@ spec:
       - name: kibana
         resources:
           limits:
-            memory: 2Gi
+            memory: 1Gi
             cpu: 1
-  elasticsearchRef:
-    name: quickstart
-  http:
-    service: 
-      spec:
-        type: NodePort
-    tls: 
-      selfSignedCertificate:
-        disabled: true

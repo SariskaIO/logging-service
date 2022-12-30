@@ -4,7 +4,5 @@ metadata:
   name: es-flow
   namespace: logging
 spec:
-  match:
-     - select: {}
   localOutputRefs:
-    - es-outputx
+    - es-output
