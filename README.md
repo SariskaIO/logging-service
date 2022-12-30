@@ -1,6 +1,13 @@
 ## EFK Setup
 
- 1. logs can be accessed at: https://logs.sariska.io
+
+
+## Setup Contains
+ - Curator to clear logs after some interval
+ - Elasticsearch for database
+ - Fluentd and Fluentbit for logs prosessor and logs collector
+ - Kibana for visualization
+ - scalable setup 
 
 ## Architecture:
 
@@ -31,7 +38,11 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
  curl -X DELETE 'http://localhost:9200/_all'
 
  
+## Elastic operator CRD
  
+https://www.elastic.co/guide/en/cloud-on-k8s/2.5/k8s-deploy-eck.html
+https://github.com/elastic/cloud-on-k8s/tree/2.5/config/samples
+https://www.elastic.co/guide/en/cloud-on-k8s/2.5/k8s-deploy-eck.html
 ## Restart fluentbit daemonsets  
 
  curl -X DELETE 'http://localhost:9200/_all'
@@ -46,6 +57,20 @@ Note:- Deleting a helm chart command (loggin-operator is the release name, Also 
 1. kubectl get secret quickstart-es-elastic-user  -n logging -o go-template='{{.data.elastic | base64decode}}'
 2. kubectl port-forward service/quickstart-es-http -n logging-test 9200
 3. kubectl port-forward service/quickstart-kb-http -n logging-test 5601
+
+
+
+## Custom Resource Definition
+
+You can define `outputs` (destinations where you want to send your log messages, for example, Elasticsearch, or and Amazon S3 bucket), and `flows` that use filters and selectors to route log messages to the appropriate outputs. You can also define cluster-wide outputs and flows, for example, to use a centralized output that namespaced users cannot modify.
+
+You can configure the Logging operator using the following Custom Resource Definitions.
+
+- [logging](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/logging_types/) - Represents a logging system. Includes `Fluentd` and `Fluent-bit` configuration. Specifies the `controlNamespace`. Fluentd and Fluent-bit will be deployed in the `controlNamespace`
+- [output](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/output_types/) - Defines an Output for a logging flow. This is a namespaced resource. See also `clusteroutput`.
+- [flow](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/flow_types/) - Defines a logging flow with `filters` and `outputs`. You can specify `selectors` to filter logs by labels. Outputs can be `output` or `clusteroutput`.  This is a namespaced resource. See also `clusterflow`.
+- [clusteroutput](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/clusteroutput_types/) - Defines an output without namespace restriction. Only effective in `controlNamespace`.
+- [clusterflow](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/crds/v1beta1/output_types/) - Defines a logging flow without namespace restriction.
 
 ## Enriching the logs
 
