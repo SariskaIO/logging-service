@@ -5,9 +5,11 @@
 ## Setup Contains
  - Curator to clear logs after some interval
  - Elasticsearch for database
+ - Enterprise search on top elasticsearch 
  - Fluentd and Fluentbit for logs prosessor and logs collector
  - Kibana for visualization
  - scalable setup 
+
 
 ## Architecture:
 
@@ -27,6 +29,18 @@
     2. helm repo update
     3. helm upgrade --install --wait --create-namespace --namespace logging logging-operator banzaicloud-stable/logging-operator
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
+
+
+Generate ssl certificate for enterprise search:
+
+## step 1: generate keystore.jks
+
+https://support.globalsign.com/digital-certificates/digital-certificate-installation/java-keytool-create-keystore
+
+## step 2: self sign certificate
+
+
+https://www.elastic.co/guide/en/enterprise-search/current/configure-ssl-tls.html#configure-ssl-tls-custom-ca-server-requests
 
 ## Deploy Manifest
 
