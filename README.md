@@ -31,7 +31,7 @@
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
 
 
-Generate ssl certificate for enterprise search:
+## Generate ssl certificate for enterprise search:
 
 ## step 1: generate keystore.jks
 
