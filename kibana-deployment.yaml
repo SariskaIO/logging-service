@@ -4,10 +4,12 @@ metadata:
   name: quickstart
   namespace: logging
 spec:
-  version: 8.4.2
+  version: 8.5.3
   count: 1
+  enterpriseSearchRef:
+    name: enterprise-search-quickstart
   elasticsearchRef:
-    name: "quickstart"
+    name: quickstart
   http:
     service: 
       spec:
@@ -15,12 +17,6 @@ spec:
     tls: 
       selfSignedCertificate:
         disabled: true    
-  #http:
-  #  service:
-  #    spec:
-  #      type: LoadBalancer
-  # this shows how to customize the Kibana pod
-  # with labels and resource limits
   podTemplate:
     metadata:
       labels:

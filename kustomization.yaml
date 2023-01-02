@@ -9,6 +9,7 @@ resources:
   - cluster-output-deployment.yaml
   - curator-cronjob.yaml
   - elasticsearch-deployment.yaml
+  - enterprise-search.yaml
   - es-curator-config.yaml
   - flow-deployment.yaml
   - kibana-deployment.yaml
