@@ -5,6 +5,7 @@ metadata:
 spec:
   elasticsearch:
     host: quickstart-es-http.logging.svc.cluster.local
+    include_timestamp: true
     port: 9200
     scheme: https
     ssl_verify: false
