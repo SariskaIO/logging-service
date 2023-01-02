@@ -31,17 +31,6 @@
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
 
 
-## Generate ssl certificate for enterprise search:
-
-## step 1: generate keystore.jks
-
-https://support.globalsign.com/digital-certificates/digital-certificate-installation/java-keytool-create-keystore
-
-## step 2: self sign certificate
-
-
-https://www.elastic.co/guide/en/enterprise-search/current/configure-ssl-tls.html#configure-ssl-tls-custom-ca-server-requests
-
 ## Deploy Manifest
 
 1. kubectl apply -k .
