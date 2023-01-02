@@ -5,9 +5,11 @@
 ## Setup Contains
  - Curator to clear logs after some interval
  - Elasticsearch for database
+ - Enterprise search 
  - Fluentd and Fluentbit for logs prosessor and logs collector
  - Kibana for visualization
  - scalable setup 
+
 
 ## Architecture:
 
@@ -27,6 +29,7 @@
     2. helm repo update
     3. helm upgrade --install --wait --create-namespace --namespace logging logging-operator banzaicloud-stable/logging-operator
 Note:- Deleting a helm chart command (loggin-operator is the release name, Also use -n command)
+
 
 ## Deploy Manifest
 
