@@ -3,6 +3,7 @@
 
 
 ## Setup Contains
+ - Elastic operator
  - Elasticsearch for database
  - Enterprise search 
  - Fluentd and Fluentbit for logs prosessor and logs collector
