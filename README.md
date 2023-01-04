@@ -2,7 +2,7 @@
 
 
 
-## Setup Contains
+## Components
  - Logging operator (https://banzaicloud.com/ )
  - Elastic operator
  - Elasticsearch for database
