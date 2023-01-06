@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: logging
 
 resources:
-  - operator.yaml
+  - elastic-operator.yaml
   - all-in-one.yaml
   - cluster-flow-deployment.yaml
   - cluster-output-deployment.yaml
