@@ -2,10 +2,12 @@
 
 
 
-## Setup Contains
- - Elasticsearch for database
+## Components
+ - Logging operator (https://banzaicloud.com/ )
+ - Elastic operator 
+ - Elasticsearch for database 
  - Enterprise search 
- - Fluentd and Fluentbit for logs prosessor and logs collector
+ - Fluentd and Fluentbit for logs prosessor and logs collector(already included with logging operator but customized yaml files included in this setup )
  - Kibana for visualization
  - scalable setup 
 
