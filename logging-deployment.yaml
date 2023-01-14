@@ -6,7 +6,12 @@ metadata:
   namespace: logging
 spec:
   fluentd:
-    logLevel: debug
+    resources:
+      limits:
+          memory: 2000Mi
+      requests:
+          cpu: 100m
+          memory: 200Mi
   fluentbit: {}
   controlNamespace: logging
   watchNamespaces: ["production", "streaming"]

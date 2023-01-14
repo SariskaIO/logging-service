@@ -7,6 +7,14 @@ spec:
  elasticsearch:
     host: quickstart-es-http.logging.svc.cluster.local
     include_timestamp: true
+    reconnect_on_error: true
+    reload_on_failure: true
+    reload_connections: true
+    include_tag_key: true
+    logstash_format: true
+    logstash_prefix: fluentd
+    index_name: fluentd
+    logstash_dateformat:  '%Y.%m.%d'
     port: 9200
     scheme: https
     ssl_verify: false
@@ -18,7 +26,13 @@ spec:
           name: quickstart-es-elastic-user
           key: elastic
     buffer:
-      timekey: 1m
-      timekey_wait: 30s
       timekey_use_utc: true
-  
+      chunk_limit_size: 32MB
+      total_limit_size: 12288MB
+      type: file
+      path: "/fluentd/log/elastic-buffer"
+      flush_thread_count: 8
+      flush_interval: "1s"
+      queue_limit_length: 4
+      flush_mode: interval
+      retry_forever: true
