@@ -96,11 +96,6 @@ You can configure the Logging operator using the following Custom Resource Defin
 https://logs.sariska.io/app/dev_tools#/console
 
 
-## Please keep monitoring ES pvc , otherwise we need to relaunch cluster
-
-https://logs.sariska.io/app/dev_tools#/console
-
-
 
 ## Important resources
 * https://logz.io/blog/fluentd-vs-fluent-bit/
